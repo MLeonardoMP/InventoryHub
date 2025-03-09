@@ -1,8 +1,8 @@
-# Reflection: Using GitHub Copilot for Full-Stack Development
+# Reflection: Using Microsoft Copilot for Full-Stack Development
 
 ## Integration Code Generation
 
-GitHub Copilot significantly accelerated my development process by generating integration code between the frontend Blazor components and backend API endpoints. For example, when implementing the product listing page in `fetchproducts.razor`, Copilot suggested the appropriate HTTP client code to fetch data from the API:
+Microsoft Copilot significantly accelerated my development process by generating integration code between the frontend Blazor components and backend API endpoints. For example, when implementing the product listing page in `fetchproducts.razor`, Copilot suggested the appropriate HTTP client code to fetch data from the API:
 
 ```csharp
 products = await httpclient.GetFromJsonAsync<Product[]>("http://localhost:5074/api/products");
@@ -144,6 +144,6 @@ else
 
    > **Quality assurance:** Despite Copilot's accuracy, cross-checking its generated models against actual API responses caught several minor discrepancies that would have caused runtime issues.
 
-In conclusion, GitHub Copilot transformed my development workflow for this project, reducing the time spent on repetitive coding tasks like creating model classes and implementing data retrieval. This allowed me to focus more on the application's overall structure and user experience when displaying product information.
+In conclusion, Microsoft Copilot transformed my development workflow for this project, reducing the time spent on repetitive coding tasks like creating model classes and implementing data retrieval. This allowed me to focus more on the application's overall structure and user experience when displaying product information.
 
 > **Overall productivity impact:** Using Copilot for this project reduced development time by approximately 40%, with the greatest time savings in API integration, data modeling, and UI component creation. The most significant benefit was the reduction in context-switching between coding and documentation lookup.

@@ -41,13 +41,13 @@ A modern full-stack application demonstrating the integration of Blazor WebAssem
 
 - `/client` - Blazor WebAssembly frontend application
 - `/Server` - ASP.NET Core minimal API backend
-- `/REFLECTION.md` - Development process and GitHub Copilot insights
+- `/REFLECTION.md` - Development process and Microsoft Copilot insights
 
 ## Development Insights
 
-This project was developed with assistance from GitHub Copilot. For a detailed reflection on how AI pair programming enhanced the development process, including specific examples of time-saving suggestions and performance optimizations, see the [REFLECTION.md](REFLECTION.md) document.
+This project was developed with assistance from Microsoft Copilot. For a detailed reflection on how AI pair programming enhanced the development process, including specific examples of time-saving suggestions and performance optimizations, see the [REFLECTION.md](REFLECTION.md) document.
 
-> The REFLECTION.md file provides valuable insights into using AI-assisted development tools for full-stack applications, including concrete examples of how GitHub Copilot improved development efficiency by approximately 40% through intelligent code generation and troubleshooting assistance.
+> The REFLECTION.md file provides valuable insights into using AI-assisted development tools for full-stack applications, including concrete examples of how Microsoft Copilot improved development efficiency by approximately 40% through intelligent code generation and troubleshooting assistance.
 
 ## Technologies Used
 
