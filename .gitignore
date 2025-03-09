@@ -1,0 +1,70 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+# Rider/JetBrains files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet Packages
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio cache files
+*.[Cc]ache
+!?*.[Cc]ache/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Blazor
+**/_framework/
+**/*.browser.js
+**/*.dll
+**/*.pdb
+**/*.wasm
+**/blazor.*.js
+
+# Environment files
+.env*
+appsettings.Development.json
+appsettings.Production.json
+appsettings.local.json
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Bootstrap and other client libraries
+**/wwwroot/lib/
+node_modules/

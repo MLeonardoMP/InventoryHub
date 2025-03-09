@@ -1,0 +1,106 @@
+@page "/fetchproducts"
+@inject System.Net.Http.HttpClient httpclient
+@implements IDisposable
+@using System.Net.Http.Json
+
+<h3>Product List</h3>
+
+@if (loading)
+{
+    <p>Loading products...</p>
+}
+else if (error)
+{
+    <div class="alert alert-danger">
+        Failed to load products. Please try again later.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (products != null)
+            {
+                foreach (var product in products)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>$@product.Price.ToString("F2")</td>
+                        <td>@product.Stock</td>
+                        <td>@product.Category.Name</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5">No products found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Product[]? products;
+    private bool loading = true;
+    private bool error = false;
+    private CancellationTokenSource? cts;
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadProductsAsync();
+    }
+
+    private async Task LoadProductsAsync()
+    {
+        loading = true;
+        error = false;
+        cts = new CancellationTokenSource();
+
+        try
+        {
+            products = await httpclient.GetFromJsonAsync<Product[]>(
+                "http://localhost:5074/api/products", 
+                cts.Token);
+        }
+        catch (Exception)
+        {
+            error = true;
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    public void Dispose()
+    {
+        cts?.Cancel();
+        cts?.Dispose();
+    }
+
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int Stock { get; set; }
+        public Category Category { get; set; }
+    }
+
+    public class Category
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+}

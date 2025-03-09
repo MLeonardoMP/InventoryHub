@@ -1,0 +1,29 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# C# files
+*.cs text diff=csharp
+
+# Blazor files
+*.razor text
+
+# Solution and project files
+*.sln text
+*.csproj text
+
+# Config files
+*.json text
+*.yml text
+*.yaml text
+*.config text
+
+# Web assets
+*.js text
+*.css text
+*.html text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
