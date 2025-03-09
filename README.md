@@ -58,6 +58,7 @@ This project was developed with assistance from Microsoft Copilot. For a detaile
 - Bootstrap
 - Memory Caching
 - Git
+- Microsoft Copilot
 
 ## License
 
